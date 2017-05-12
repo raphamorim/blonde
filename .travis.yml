@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+env:
+  - REACTFY_DEBUG=true
+  - DEBUG=true
+node_js:
+  - "6.1.0"
+  - "6.4.0"
+  - "7"
+  - "7.7"
+cache:
+  directories:
+    - node_modules
