@@ -10,6 +10,9 @@
 
 - [Why Reactfy?](#why-reactfy)
 - [Getting](#getting)
+- [Examples](#examples)
+  - [Pure React](#pure-react)
+  - [React with Flow and Apollo](#react-with-flow-and-apollo)
 - [Usage](#usage)
   - [Bundling](#bundling-usage)
   - [Server Sider Render](#ssr-usage)
@@ -32,6 +35,11 @@ Already behind ecosystem support for [flow](https://flow.org), object-rest-sprea
 ```bash
 npm install -D reactfy
 ```
+
+# Examples
+
+#### [Pure React](test/fixtures/react/README.md)
+#### [React with Flow and Apollo](test/fixtures/react-flow-apollo/README.md)
 
 # Usage
 

@@ -125,7 +125,7 @@ function Reactfy (config) {
 const load = function _load (path) {
   try {
     let dep
-    console.log('recursive last path: ', lastFilePath)
+    logger(`recursive last path: ${lastFilePath}`)
 
     logger(`trying... >>>${path}`, true)
     dep = tryRequire(path)
