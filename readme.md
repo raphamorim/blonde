@@ -12,11 +12,12 @@
 - [Getting](#getting)
 - [Usage](#usage)
   - [Bundling](#bundling-usage)
-  - [Parsing to ReactElement](#parsing-to-reactelement)
   - [Server Sider Render](#ssr-usage)
+  - [Parsing to ReactElement](#parsing-to-reactelement)
   - [Resolving as Node Module](#resolving-as-node-module)
   - [Electron](#electron-usage)
-- [How it works?]()
+- [How it works?](#how-it-works)
+- [Who is using?](#whos-using)
 
 #### Why Reactfy?
 
@@ -31,6 +32,12 @@ Already behind ecosystem support for [flow](https://flow.org), object-rest-sprea
 ```bash
 npm install -D reactfy
 ```
+
+# Usage
+
+## Bundling
+
+Not available yet, working in progress.
 
 ## SSR usage
 
