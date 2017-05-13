@@ -1,5 +1,7 @@
 sudo: false
 language: node_js
+before_install:
+  - bash -c "cd test/fixtures/react-flow-apollo && yarn"
 env:
   - REACTFY_DEBUG=true
   - DEBUG=true
