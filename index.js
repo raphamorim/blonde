@@ -19,7 +19,7 @@ const babelConfig = {
     // used to comply to babel-preset-react-app
     require('babel-plugin-transform-object-rest-spread'),
     // used to remove css imports
-    [ require('babel-plugin-transform-require-ignore').default, { extensions: ['.css'] } ],
+    [ require('babel-plugin-transform-require-ignore').default, { extensions: ['.css'] } ]
   ]
 }
 
@@ -129,13 +129,15 @@ const load = function _load (path) {
 
     logger(`trying... >>>${path}`, true)
     dep = tryRequire(path)
-    if (dep !== undefined)
+    if (dep !== undefined) {
       return dep
+    }
 
     logger(`trying... ${DIRPATH}/node_modules/${path}`, true)
     dep = tryRequire(`${DIRPATH}/node_modules/${path}`)
-    if (dep !== undefined)
+    if (dep !== undefined) {
       return dep
+    }
 
     if (lastFilePath) {
       const withLastPath = nodePath.dirname(lastFilePath)
@@ -160,7 +162,6 @@ const load = function _load (path) {
     } else {
       path = path + '.js'
     }
-
 
     logger(path, true)
 

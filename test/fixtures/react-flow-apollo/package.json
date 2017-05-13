@@ -1,10 +1,11 @@
 {
-  "name": "react-flow-apollo",
+  "name": "reactfy-example-react-flow-apollo",
   "version": "0.1.0",
   "dependencies": {
     "apollo-client": "^1.2.2",
     "graphql-tag": "^2.0.0",
     "memoize-functions": "^1.0.0",
+    "react": "^15.5.4",
     "react-apollo": "^1.2.0",
     "react-with-dimension": "^1.0.9",
     "recompose": "^0.22.0"

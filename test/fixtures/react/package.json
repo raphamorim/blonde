@@ -1,0 +1,10 @@
+{
+  "name": "reactfy-example-react",
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "^15.5.4"
+  },
+  "devDependencies": {
+    "reactfy": "^0.1.0"
+  }
+}

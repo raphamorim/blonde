@@ -2,7 +2,7 @@
 
 # Reactfy [STILL IN EXPERIMENTAL PHASE]
 
-![Reactfy](images/illustration.jpg)
+![Reactfy](https://github.com/raphamorim/reactfy/blob/master/images/illustration.jpg?raw=true)
 
 > No more painfull React's setup
 
