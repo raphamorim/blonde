@@ -1,8 +1,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/raphamorim/reactfy/badge.svg?branch=master)](https://coveralls.io/github/raphamorim/reactfy?branch=master) [![Build Status](https://travis-ci.org/raphamorim/reactfy.svg)](https://travis-ci.org/raphamorim/reactfy) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 
-# Reactfy
+# Reactfy [STILL IN EXPERIMENTAL PHASE]
 
-> Painfull Reactjs ecossystem setup no more
+![Reactfy](images/illustration.jpg)
+
+> No more painfull React's setup
 
 ## Summary
 
@@ -18,11 +20,11 @@
 
 #### Why Reactfy?
 
-Você provavelmente já perdeu horas configurando Webpack, setup de plugins do babel para cada feature que você quer adicionar em um simples projeto. Reactfy promete atender todas as necessidades básicas de uma aplicação React, bastando apenas instalar.
+You've probably already lost hours configuring Webpack by adding / removing babel plugins for each feature you want to control in a simple project. Reactfy promises to meet all the basic needs of a React application by simply installing.
 
-Reactfy entrega desde o bundle do projeto até o SSR. Além de trazer suporte para o Electron. Tudo já vem pronto, com a promessa de funcionar do ES5 até o atual.
+Reactfy commits to deliver from the project bundle to the SSR layer. In addition to bringing SSR support for Electron. Everything is ready, with the promise of working from ES5 to the present.
 
-Já trás suporte ao ecossistema do flow, object-rest-spread, class-properties...
+Already behind ecosystem support for [flow](https://flow.org), object-rest-spread, class-properties ...
 
 #### Getting
 
