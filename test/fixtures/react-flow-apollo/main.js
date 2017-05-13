@@ -11,14 +11,12 @@ const apolloClient = new ApolloClient({
 const App = ({ apolloClient, productId }) => (
   <ApolloProvider client={apolloClient}>
     <div>
-      <Image />
+      <Image src={'http//image.jpg'} />
+      <h2>My Image</h2>
     </div>
   </ApolloProvider>
 )
 
-App.defaultProps = {
-  apolloClient,
-  productId: "product"
-}
+App.defaultProps = { apolloClient }
 
 export default App
