@@ -48,22 +48,4 @@ describe('React Flow Apollo App Render', function () {
       done()
     })
   })
-  // context('Check if create tmp file', function () {
-  //   it('should have tmp file', function (done) {
-  //     const result = reactfy({
-  //       path: 'test/fixtures/react/main.js',
-  //       template: template
-  //     })
-
-  //     assert.equal(typeof result, 'string')
-  //     assert.equal(result, url.format({
-  //       pathname: `${process.cwd()}/reactfy.html`,
-  //       protocol: 'file:',
-  //       slashes: true
-  //     }))
-  //     assert.equal(fs.readFileSync('./reactfy.html').toString(), template(renderedApp))
-
-  //     done()
-  //   })
-  // })
 })

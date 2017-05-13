@@ -32,8 +32,8 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6",
     "is-directory": "^0.3.1",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "require-from-string": "1.2.1",
     "try-require": "^1.2.1"
   },

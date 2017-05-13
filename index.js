@@ -19,7 +19,12 @@ const babelConfig = {
     // used to comply to babel-preset-react-app
     require('babel-plugin-transform-object-rest-spread'),
     // used to remove css imports
-    [ require('babel-plugin-transform-require-ignore').default, { extensions: ['.css'] } ]
+    [
+      require('babel-plugin-transform-require-ignore').default,
+      {
+        extensions: ['.css']
+      }
+    ]
   ]
 }
 
@@ -63,7 +68,7 @@ function Reactfy (config) {
     try {
       fs.unlinkSync(filepath)
     } catch (e) {
-      // console.log(e)
+      logger(e)
     }
   }
 
