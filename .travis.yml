@@ -3,8 +3,7 @@ language: node_js
 before_install:
   - bash -c "cd test/fixtures/react-flow-apollo && yarn"
 env:
-  - REACTFY_DEBUG=true
-  - DEBUG=true
+  - REACTFY_DEBUG=true DEBUG=true
 node_js:
   - "6.1.0"
   - "6.4.0"
