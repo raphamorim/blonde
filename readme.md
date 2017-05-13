@@ -38,8 +38,8 @@ npm install -D reactfy
 
 # Examples
 
-#### [Pure React](test/fixtures/react/README.md)
-#### [React with Flow and Apollo](test/fixtures/react-flow-apollo/README.md)
+#### [Pure React](https://github.com/raphamorim/reactfy/blob/master/test/fixtures/react/README.md)
+#### [React with Flow and Apollo](https://github.com/raphamorim/reactfy/blob/master/test/fixtures/react-flow-apollo/README.md)
 
 # Usage
 

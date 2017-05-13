@@ -1,6 +1,6 @@
 {
   "name": "reactfy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React universal resolver",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "keywords": [
     "react",
     "electron",
+    "resolver",
     "flow",
     "server",
     "render",
