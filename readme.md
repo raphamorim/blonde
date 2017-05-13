@@ -98,7 +98,17 @@ console.log(reactfy({path: './greeting.js', resolve: 'react'}))
 const reactfy = require('reactfy')
 console.log(reactfy({path: './greeting.js', resolve: 'module'}))
 /*
+function Dialog(props) {
+  (0, _helpers.log)('sample');
 
+  return _react2.default.createElement(
+    'section',
+    { role: 'dialog', className: 'modal' },
+    _react2.default.createElement('input', { type: 'text', className: 'modal-search', id: 'modal-search', placeholder: 'Search for packages....' }),
+    _react2.default.createElement('div', { className: 'modal-items' }),
+    _react2.default.createElement(_Tab2.default, null)
+  );
+}
 */
 ```
 
