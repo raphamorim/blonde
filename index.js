@@ -83,7 +83,7 @@ function Blonde (config) {
 
   transform = transform.code.replace('exports.default', 'module.exports')
 
-  const pathBlonde = (process.env.REACTFY_DEBUG) ? `${process.cwd()}/index.js` : 'blonde'
+  const pathBlonde = (process.env.BLONDE_DEBUG) ? `${process.cwd()}/index.js` : 'blonde'
   transform = `"use strict"; require = require('${pathBlonde}').load; ${transform}`
 
   try {
@@ -174,7 +174,7 @@ const load = function _load (path) {
     lastFilePath = path
 
     transform = transform.code.replace('exports.default', 'module.exports')
-    const pathBlonde = (process.env.REACTFY_DEBUG) ? `${process.cwd()}/index.js` : 'blonde'
+    const pathBlonde = (process.env.BLONDE_DEBUG) ? `${process.cwd()}/index.js` : 'blonde'
     transform = `"use strict"; require = require('${pathBlonde}').load; ${transform}`
     return requireFromString(transform)
   } catch (err) {
