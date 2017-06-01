@@ -1,6 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/raphamorim/blonde/badge.svg?branch=master)](https://coveralls.io/github/raphamorim/blonde?branch=master) [![Build Status](https://travis-ci.org/raphamorim/blonde.svg)](https://travis-ci.org/raphamorim/blonde) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 
-# Blonde [STILL IN EXPERIMENTAL PHASE]
+# Blonde
 
 ![Blonde](https://github.com/raphamorim/blonde/blob/master/images/blonde.jpg?raw=true)
 
