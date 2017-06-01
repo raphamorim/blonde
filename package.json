@@ -1,6 +1,6 @@
 {
-  "name": "reactfy",
-  "version": "0.1.1",
+  "name": "blonde",
+  "version": "0.1.0",
   "description": "React universal resolver",
   "main": "index.js",
   "scripts": {

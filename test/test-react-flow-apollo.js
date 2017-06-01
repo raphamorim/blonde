@@ -2,15 +2,15 @@ const fs = require('fs')
 const url = require('url')
 
 const assert = require('assert')
-const reactfy = require('../index')
+const blonde = require('../index')
 
-process.env['REACTFY_DEBUG'] = true
+process.env['BLONDE_DEBUG'] = true
 process.env['DEBUG'] = true
 
 describe('React Flow Apollo App Render', function () {
   context('Setting Template', function () {
     it('should get app rendered wrapped by template', function (done) {
-      const result = reactfy({
+      const result = blonde({
         path: 'test/fixtures/react-flow-apollo/main.js',
         resolve: 'string'
       })
@@ -25,7 +25,7 @@ describe('React Flow Apollo App Render', function () {
   })
   context('Without set template', function () {
     it('should get app rendered only', function (done) {
-      const result = reactfy({
+      const result = blonde({
         path: 'test/fixtures/react-flow-apollo/main.js',
         resolve: 'module'
       })
@@ -38,7 +38,7 @@ describe('React Flow Apollo App Render', function () {
   })
   context('Without set template', function () {
     it('should get app rendered only', function (done) {
-      const result = reactfy({
+      const result = blonde({
         path: 'test/fixtures/react-flow-apollo/main.js',
         resolve: 'react'
       })

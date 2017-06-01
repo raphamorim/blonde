@@ -1,5 +1,5 @@
 {
-  "name": "reactfy-example-react-flow-apollo",
+  "name": "blonde-example-react-flow-apollo",
   "version": "0.1.0",
   "dependencies": {
     "apollo-client": "^1.2.2",
@@ -11,6 +11,6 @@
     "recompose": "^0.22.0"
   },
   "devDependencies": {
-    "reactfy": "^0.1.0"
+    "blonde": "^0.1.0"
   }
 }

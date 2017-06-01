@@ -22,7 +22,7 @@ const babelConfig = {
     [
       require('babel-plugin-transform-require-ignore').default,
       {
-        extensions: ['.css']
+        extensions: ['.css', '.scss', '.less']
       }
     ]
   ]
@@ -55,7 +55,7 @@ const logger = function _logger (message, important) {
   }
 }
 
-function Reactfy (config) {
+function Blonde (config) {
   if (!config.path) {
     return false
   }
@@ -83,8 +83,8 @@ function Reactfy (config) {
 
   transform = transform.code.replace('exports.default', 'module.exports')
 
-  const pathReactfy = (process.env.REACTFY_DEBUG) ? `${process.cwd()}/index.js` : 'reactfy'
-  transform = `"use strict"; require = require('${pathReactfy}').load; ${transform}`
+  const pathBlonde = (process.env.REACTFY_DEBUG) ? `${process.cwd()}/index.js` : 'blonde'
+  transform = `"use strict"; require = require('${pathBlonde}').load; ${transform}`
 
   try {
     lastFilePath = null
@@ -105,7 +105,7 @@ function Reactfy (config) {
       return body
     }
 
-    const indexPath = `${process.cwd()}/reactfy.html`
+    const indexPath = `${process.cwd()}/blonde.html`
     fs.writeFileSync(indexPath, body, 'utf-8')
 
     // do something when app is closing
@@ -126,7 +126,7 @@ function Reactfy (config) {
   }
 }
 
-// transfom nodejs-require to require('reactfy').load;
+// transfom nodejs-require to require('blonde').load;
 const load = function _load (path) {
   try {
     let dep
@@ -174,8 +174,8 @@ const load = function _load (path) {
     lastFilePath = path
 
     transform = transform.code.replace('exports.default', 'module.exports')
-    const pathReactfy = (process.env.REACTFY_DEBUG) ? `${process.cwd()}/index.js` : 'reactfy'
-    transform = `"use strict"; require = require('${pathReactfy}').load; ${transform}`
+    const pathBlonde = (process.env.REACTFY_DEBUG) ? `${process.cwd()}/index.js` : 'blonde'
+    transform = `"use strict"; require = require('${pathBlonde}').load; ${transform}`
     return requireFromString(transform)
   } catch (err) {
     logger(err)
@@ -183,4 +183,4 @@ const load = function _load (path) {
   }
 }
 
-module.exports = extend(Reactfy.bind(this), {load: load})
+module.exports = extend(Blonde.bind(this), {load: load})

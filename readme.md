@@ -1,14 +1,14 @@
-[![Coverage Status](https://coveralls.io/repos/github/raphamorim/reactfy/badge.svg?branch=master)](https://coveralls.io/github/raphamorim/reactfy?branch=master) [![Build Status](https://travis-ci.org/raphamorim/reactfy.svg)](https://travis-ci.org/raphamorim/reactfy) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Coverage Status](https://coveralls.io/repos/github/raphamorim/blonde/badge.svg?branch=master)](https://coveralls.io/github/raphamorim/blonde?branch=master) [![Build Status](https://travis-ci.org/raphamorim/blonde.svg)](https://travis-ci.org/raphamorim/blonde) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 
-# Reactfy [STILL IN EXPERIMENTAL PHASE]
+# Blonde [STILL IN EXPERIMENTAL PHASE]
 
-![Reactfy](https://github.com/raphamorim/reactfy/blob/master/images/illustration.jpg?raw=true)
+![Blonde](https://github.com/raphamorim/blonde/blob/master/images/blonde.jpg?raw=true)
 
 > No more painfull React's setup
 
 ## Summary
 
-- [Why Reactfy?](#why-reactfy)
+- [Why Blonde?](#why-blonde)
 - [Getting](#getting)
 - [Examples](#examples)
   - [Pure React](#pure-react)
@@ -22,24 +22,24 @@
 - [How it works?](#how-it-works)
 - [Who is using?](#whos-using)
 
-#### Why Reactfy?
+#### Why Blonde?
 
-You've probably already lost hours configuring Webpack by adding / removing babel plugins for each feature you want to control in a simple project. Reactfy promises to meet all the basic needs of a React application by simply installing.
+You've probably already lost hours configuring Webpack by adding / removing babel plugins for each feature you want to control in a simple project. Blonde promises to meet all the basic needs of a React application by simply installing.
 
-Reactfy commits to deliver from the project bundle to the SSR layer. In addition to bringing SSR support for Electron. Everything is ready, with the promise of working from ES5 to the present.
+Blonde commits to deliver from the project bundle to the SSR layer. In addition to bringing SSR support for Electron. Everything is ready, with the promise of working from ES5 to the present.
 
 Already behind ecosystem support for [flow](https://flow.org), object-rest-spread, class-properties ...
 
 #### Getting
 
 ```bash
-npm install -D reactfy
+npm install -D blonde
 ```
 
 # Examples
 
-#### [Pure React](https://github.com/raphamorim/reactfy/blob/master/test/fixtures/react/README.md)
-#### [React with Flow and Apollo](https://github.com/raphamorim/reactfy/blob/master/test/fixtures/react-flow-apollo/README.md)
+#### [Pure React](https://github.com/raphamorim/blonde/blob/master/test/fixtures/react/README.md)
+#### [React with Flow and Apollo](https://github.com/raphamorim/blonde/blob/master/test/fixtures/react-flow-apollo/README.md)
 
 # Usage
 
@@ -66,8 +66,8 @@ export default Greeting
 ##### apply it
 
 ```js
-const reactfy = require('reactfy')
-console.log(reactfy({path: './greeting.js', resolve: 'string'}))
+const blonde = require('blonde')
+console.log(blonde({path: './greeting.js', resolve: 'string'}))
 ```
 
 ##### output
@@ -79,8 +79,8 @@ console.log(reactfy({path: './greeting.js', resolve: 'string'}))
 ## Parsing to ReactElement
 
 ```js
-const reactfy = require('reactfy')
-console.log(reactfy({path: './greeting.js', resolve: 'react'}))
+const blonde = require('blonde')
+console.log(blonde({path: './greeting.js', resolve: 'react'}))
 /*
 { '$$typeof': Symbol(react.element),
   type: [Function: Dialog],
@@ -95,8 +95,8 @@ console.log(reactfy({path: './greeting.js', resolve: 'react'}))
 ## Resolving as Node Module
 
 ```js
-const reactfy = require('reactfy')
-console.log(reactfy({path: './greeting.js', resolve: 'module'}))
+const blonde = require('blonde')
+console.log(blonde({path: './greeting.js', resolve: 'module'}))
 /*
 function Dialog(props) {
   (0, _helpers.log)('sample');
@@ -117,13 +117,13 @@ function Dialog(props) {
 #### main.js
 
 ```js
-const reactfy = require('reactfy')
+const blonde = require('blonde')
 const template = require('./template')
 
 function createWindow() {
   let mainWindow = new BrowserWindow(config)
 
-  mainWindow.loadURL(reactfy({
+  mainWindow.loadURL(blonde({
     path: 'src/App.js',
     template: template
   }))
@@ -160,7 +160,7 @@ module.exports = (app) => {
 
 I strongly recommend: **NO**.
 
-Why? Reactfy reads any code and parse/transpile it in runtime. It cost a lot, just imagine for every process, you will read/parse/transpile/tokenize/write.
+Why? Blonde reads any code and parse/transpile it in runtime. It cost a lot, just imagine for every process, you will read/parse/transpile/tokenize/write.
 
 ## How it works?
 
@@ -170,8 +170,4 @@ Why? Reactfy reads any code and parse/transpile it in runtime. It cost a lot, ju
 4. Create a dynamic HTML file based on render result
 5. When nodejs dispatch `exit`, `SIGINT` or `uncaughtException` event: delete `_.html`
 
-## Who's using:
-
-- [Retro Editor](https://github.com/raphamorim/retro)
-
-If you're using, [let me know](https://github.com/raphamorim/reactfy/issues/new) :)
+If you're using, [let me know](https://github.com/raphamorim/blonde/issues/new) :)
