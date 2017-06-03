@@ -2,9 +2,7 @@
 
 # Blonde
 
-![Blonde](https://github.com/raphamorim/blonde/blob/master/images/blonde.jpg?raw=true)
-
-> No more painfull React's setup
+> painfull setup no more
 
 ## Summary
 
@@ -43,11 +41,11 @@ npm install -D blonde
 
 # Usage
 
-## Bundling
+## toBundle
 
 Not available yet, working in progress.
 
-## SSR usage
+## toReactString
 
 ##### greeting.js
 
@@ -67,7 +65,7 @@ export default Greeting
 
 ```js
 const blonde = require('blonde')
-console.log(blonde({path: './greeting.js', resolve: 'string'}))
+blonde.toReactString('./greeting.js')
 ```
 
 ##### output
@@ -76,11 +74,11 @@ console.log(blonde({path: './greeting.js', resolve: 'string'}))
 <h1 data-reactroot="" data-reactid="1" data-react-checksum="1601575969"><!-- react-text: 2 -->Hello, <!-- /react-text --></h1>
 ```
 
-## Parsing to ReactElement
+## toReactElement
 
 ```js
 const blonde = require('blonde')
-console.log(blonde({path: './greeting.js', resolve: 'react'}))
+blonde.toReactElement('./greeting.js')
 /*
 { '$$typeof': Symbol(react.element),
   type: [Function: Dialog],
@@ -92,11 +90,11 @@ console.log(blonde({path: './greeting.js', resolve: 'react'}))
 */
 ```
 
-## Resolving as Node Module
+## parse
 
 ```js
 const blonde = require('blonde')
-console.log(blonde({path: './greeting.js', resolve: 'module'}))
+blonde.parse('./greeting.js')
 /*
 function Dialog(props) {
   (0, _helpers.log)('sample');
@@ -112,7 +110,7 @@ function Dialog(props) {
 */
 ```
 
-## Electron Usage
+## toElectron
 
 #### main.js
 
@@ -122,11 +120,9 @@ const template = require('./template')
 
 function createWindow() {
   let mainWindow = new BrowserWindow(config)
+  let url = blonde.toElectron('src/App.js', template)
 
-  mainWindow.loadURL(blonde({
-    path: 'src/App.js',
-    template: template
-  }))
+  mainWindow.loadURL(url)
 
   mainWindow.on('closed', function() {
     mainWindow = null

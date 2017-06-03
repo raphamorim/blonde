@@ -26,11 +26,7 @@ process.env['DEBUG'] = true
 describe('React Render', function () {
   context('Setting Template', function () {
     it('should get app rendered wrapped by template', function (done) {
-      const result = blonde({
-        path: 'test/fixtures/react/main.js',
-        template: template,
-        resolve: 'string'
-      })
+      const result = blonde.toReactString('test/fixtures/react/main.js', template)
 
       assert.equal(typeof result, 'string')
       assert.equal(result, template(renderedApp))
@@ -40,10 +36,7 @@ describe('React Render', function () {
   })
   context('Without set template', function () {
     it('should get app rendered only', function (done) {
-      const result = blonde({
-        path: 'test/fixtures/react/main.js',
-        resolve: 'string'
-      })
+      const result = blonde.toReactString('test/fixtures/react/main.js')
 
       assert.equal(typeof result, 'string')
       assert.equal(result, renderedApp)
@@ -53,11 +46,7 @@ describe('React Render', function () {
   })
   context('Without set template', function () {
     it('should get app rendered only', function (done) {
-      const result = blonde({
-        path: 'test/fixtures/react/main.js',
-        resolve: 'react'
-      })
-
+      const result = blonde.toReactElement('test/fixtures/react/main.js')
       assert.equal(typeof result, 'object')
 
       done()
@@ -65,10 +54,8 @@ describe('React Render', function () {
   })
   context('Check if create tmp file', function () {
     it('should have tmp file', function (done) {
-      const result = blonde({
-        path: 'test/fixtures/react/main.js',
-        template: template
-      })
+      const result = blonde.toElectron(
+        'test/fixtures/react/main.js', template)
 
       assert.equal(typeof result, 'string')
       assert.equal(result, url.format({

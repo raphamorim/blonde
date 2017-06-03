@@ -30,7 +30,43 @@ const babelConfig = {
 
 let DIRPATH, lastFilePath
 
-const extend = function _extend (a, b, undefOnly) {
+function parse (path) {
+  return Blonde({
+    path: path,
+    resolve: 'module'
+  })
+}
+
+function toString (path) {
+  return Blonde({
+    path: path,
+    resolve: 'string'
+  })
+}
+
+function toReactString (path, template) {
+  return Blonde({
+    path: path,
+    resolve: 'react-string',
+    template: template
+  })
+}
+
+function toReactElement (path) {
+  return Blonde({
+    path: path,
+    resolve: 'react'
+  })
+}
+
+function toElectron (path, template) {
+  return Blonde({
+    path: path,
+    template: template
+  })
+}
+
+function extend (a, b, undefOnly) {
   for (var prop in b) {
     if (Object.prototype.hasOwnProperty.call(b, prop)) {
       if (prop !== 'constructor' || a !== global) {
@@ -90,6 +126,10 @@ function Blonde (config) {
     lastFilePath = null
 
     const app = requireFromString(transform)
+    if (resolve && resolve === 'string') {
+      return app.toString()
+    }
+
     if (resolve && resolve === 'module') {
       return app
     }
@@ -101,7 +141,7 @@ function Blonde (config) {
 
     const appString = reactDOMServer.renderToString(App)
     const body = template(appString)
-    if (resolve && resolve === 'string') {
+    if (resolve && resolve === 'react-string') {
       return body
     }
 
@@ -127,7 +167,7 @@ function Blonde (config) {
 }
 
 // transfom nodejs-require to require('blonde').load;
-const load = function _load (path) {
+function load (path) {
   try {
     let dep
     logger(`recursive last path: ${lastFilePath}`)
@@ -183,4 +223,11 @@ const load = function _load (path) {
   }
 }
 
-module.exports = extend(Blonde.bind(this), {load: load})
+module.exports = extend(Blonde.bind(this), {
+  load: load,
+  parse: parse,
+  toString: toString,
+  toReactString: toReactString,
+  toReactElement: toReactElement,
+  toElectron: toElectron,
+})
