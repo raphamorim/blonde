@@ -229,5 +229,5 @@ module.exports = extend(Blonde.bind(this), {
   toString,
   toReactString,
   toReactElement,
-  toElectron,
+  toElectron
 })
