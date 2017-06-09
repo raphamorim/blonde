@@ -28,8 +28,7 @@ const babelConfig = {
   ]
 }
 
-let DIRPATH;
-let lastFilePath;
+let DIRPATH, lastFilePath
 
 function parse (path) {
   return Blonde({
@@ -231,4 +230,4 @@ module.exports = extend(Blonde.bind(this), {
   toReactString,
   toReactElement,
   toElectron,
-});
+})
