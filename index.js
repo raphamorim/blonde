@@ -28,41 +28,42 @@ const babelConfig = {
   ]
 }
 
-let DIRPATH, lastFilePath
+let DIRPATH;
+let lastFilePath;
 
 function parse (path) {
   return Blonde({
-    path: path,
+    path,
     resolve: 'module'
   })
 }
 
 function toString (path) {
   return Blonde({
-    path: path,
+    path,
     resolve: 'string'
   })
 }
 
 function toReactString (path, template) {
   return Blonde({
-    path: path,
+    path,
     resolve: 'react-string',
-    template: template
+    template
   })
 }
 
 function toReactElement (path) {
   return Blonde({
-    path: path,
+    path,
     resolve: 'react'
   })
 }
 
 function toElectron (path, template) {
   return Blonde({
-    path: path,
-    template: template
+    path,
+    template
   })
 }
 
@@ -224,10 +225,10 @@ function load (path) {
 }
 
 module.exports = extend(Blonde.bind(this), {
-  load: load,
-  parse: parse,
-  toString: toString,
-  toReactString: toReactString,
-  toReactElement: toReactElement,
-  toElectron: toElectron,
-})
+  load,
+  parse,
+  toString,
+  toReactString,
+  toReactElement,
+  toElectron,
+});
